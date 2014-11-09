@@ -10,12 +10,10 @@ func init() {
 }
 
 func main() {
-	// Program Name is the first argument
-	cmd := len(os.Args[1:])
-	fmt.Printf("Program Name: %s\n", cmd)
-
-	// Count the number of arguments
+	cmd := len(os.Args[0])
 	argCount := len(os.Args[1:])
+
+	fmt.Printf("Program Name: %s\n", cmd)
 	fmt.Printf("Total Arguments: %d\n", argCount)
 
 	for i, a := range os.Args[1:] {
